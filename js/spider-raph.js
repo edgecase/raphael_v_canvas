@@ -32,8 +32,10 @@ var SpiderRaph = {
     var w = this.width / 2;
     var s = this.paper.set();
     var l = this.paper.path(this.pathString(w, h, w, 0));
-    var e = this.paper.path(this.pathString(w -3, 0, w + 3, 0));
+    var e = this.paper.path(this.pathString(w - 5, 0, w + 5, 0));
     s.push(l, e);
+    s.attr({"stroke-width":3, "stroke-opacity": 0.45, "stroke": "#555555", "stroke-linecap": "round"});
+
     s.rotate(axis * this.angle, w, h);
   },
 
@@ -45,7 +47,8 @@ var SpiderRaph = {
     var prev_pt = this.pointForAngle(0, first);
     for (var i = 0; i < values.length; i++) {
       var pt = this.pointForAngle(i+1, values[i]);
-      this.paper.path(this.pathString(prev_pt.x, prev_pt.y, pt.x, pt.y));
+      var path = this.paper.path(this.pathString(prev_pt.x, prev_pt.y, pt.x, pt.y));
+      path.attr({"stroke-width":2, "stroke": "#333333"});
       prev_pt = pt;
     }
   },
