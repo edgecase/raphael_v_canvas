@@ -1,4 +1,4 @@
-var Spider = {
+var SpiderRaph = {
 
   init: function(element, width, height, max, values) {
     this.paper = Raphael(element, width, height);

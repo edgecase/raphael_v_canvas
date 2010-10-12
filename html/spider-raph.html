@@ -9,9 +9,9 @@
 function doit() {
 var values = []
 $('input').each(function () { values.push(this.value) });
-Spider.init('canvas', 300, 300, 10, values);
+SpiderRaph.init('canvas', 300, 300, 10, values);
 
-$('input').change(function() {var v = []; $('input').each(function(){v.push(this.value)});Spider.values=v; Spider.draw()});
+$('input').change(function() {var v = []; $('input').each(function(){v.push(this.value)});SpiderRaph.values=v; SpiderRaph.draw()});
 }
 </script>
 </head>

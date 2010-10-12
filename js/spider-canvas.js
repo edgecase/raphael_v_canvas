@@ -1,4 +1,4 @@
-var Spider = {
+var SpiderCanvas = {
 
   init: function(element, max, values) {
     this.canvas = document.getElementById(element);
