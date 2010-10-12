@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<title>Spider Graph Test</title>
+<script src="../js/spider-canvas.js" type="text/javascript"></script>
+<script src="../js/jquery-1.4.2.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+function doit() {
+var values = []
+$('input').each(function () { values.push(this.value) });
+Spider.init('canvas', 10, values);
+
+$('input').change(function() {var v = []; $('input').each(function(){v.push(this.value)});Spider.values=v; Spider.draw()});
+}
+</script>
+</head>
+
+<body onload="doit();">
+<canvas style="float: left;" id="canvas" width="300" height="300"></canvas>
+<div style="float: left; padding-left: 20px;">
+  <p>dry fragrance: <input type="text" name="dry_fragrance" id="dry_fragrance" size="3" value="9.2" /></p>
+  <p>wet aroma: <input type="text" name="wet_aroma" id="wet_aroma" size="3" value="9.3" /></p>
+  <p>brightness: <input type="text" name="brightness" id="brightness" size="3" value="8.9" /></p>
+  <p>flavor: <input type="text" name="flavor" id="flavor" size="3" value="9.3" /></p>
+  <p>body: <input type="text" name="body" id="body" size="3" value="7.0" /></p>
+  <p>finish: <input type="text" name="finish" id="finish" size="3" value="9.5" /></p>
+  <p>sweetness: <input type="text" name="sweetness" id="sweetness" size="3" value="8.0" /></p>
+  <p>clean cup: <input type="text" name="clean_cup" id="clean_cup" size="3" value="8.5" /></p>
+  <p>complexity: <input type="text" name="complexity" id="complexity" size="3" value="8.5" /></p>
+  <p>uniformity: <input type="text" name="uniformity" id="uniformity" size="3" value="8.0" /></p>
+</div>
+</body> </html>
